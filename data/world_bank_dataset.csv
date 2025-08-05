@@ -1,4 +1,4 @@
-Country,Year,GDP (USD),Population,Life Expectancy,Unemployment Rate (%),CO2 Emissions (metric tons per capita),Access to Electricity (%)
+Country,Year,GDP_USD,Population,Life_xpectancy,Unemployment_Rate,CO2_Emissions,Electricity_Access
 Brazil,2010,1493220000000.0,829020000.0,66.7,3.81,10.79,76.76
 Japan,2011,17562700000000.0,897010000.0,61.4,17.98,15.67,67.86
 India,2012,16426880000000.002,669850000.0,69.1,16.02,2.08,81.08
