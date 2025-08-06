@@ -16,7 +16,7 @@ def run_sql_queries(query_file_path):
     world_bank_data.printSchema()
 
     # world bank view
-    world_bank_data.createOrReplaceTemporaryView("world_bank_dataset")
+    world_bank_data.createOrReplaceTempView("world_bank_dataset")
 
     # read and run sql queries
     with open(query_file_path,"r") as file:
