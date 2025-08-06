@@ -17,16 +17,20 @@ def run_sql_queries(query_file_path):
 
     # world bank view
     world_bank_data.createOrReplaceTempView("world_bank_dataset")
+    test_result = spark.sql("SELECT COUNT(*) AS total FROM world_bank_dataset")
+    test_result.show(truncate=False)
+
 
     # read and run sql queries
-    with open(query_file_path,"r") as file:
-        query = file.read()
+    with open(query_file_path,"r",encoding="utf-8") as file:
+        query = file.read().strip()
+        print(type(query))
         print(f"\nRunning query from: {query_file_path}")
         print(f"Query:\n{query}")
 
 
-    query_result = spark.sql(str(query))
-    query_result.show(truncate=False)
+        query_result = spark.sql(query)
+        query_result.show(truncate=False)
 
  # query file paths
 query_file_paths = [
