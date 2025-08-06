@@ -21,8 +21,11 @@ def run_sql_queries(query_file_path):
     # read and run sql queries
     with open(query_file_path,"r") as file:
         query = file.read()
+        print(f"\nRunning query from: {query_file_path}")
+        print(f"Query:\n{query}")
 
-    query_result = spark.sql(query)
+
+    query_result = spark.sql(str(query))
     query_result.show(truncate=False)
 
  # query file paths
