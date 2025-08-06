@@ -14,6 +14,9 @@ def run_sql_queries(query_file_path):
                         .load(file_path)
     world_bank_data.show(10)
     world_bank_data.printSchema()
+
+    # world bank view
+    world_bank_data.createOrReplaceTemporaryView("world_bank_dataset")
                         
 
 
